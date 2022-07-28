@@ -6,19 +6,9 @@ import TodoItem from '../../components/TodoItem';
 /**
  * API ENDPOINT - https://jsonplaceholder.typicode.com/todos?_start=0&_limit=10 
  * API DOCUMENTATION - https://jsonplaceholder.typicode.com
- * 
- * Example todo object:
-  {
-    "userId": 1,
-    "id": 4,
-    "title": "et porro tempora",
-    "completed": true
-  },
  
  Tasks/Guide
- * NOTE: I've ordered these tasks in the order i'd complete them but feel free to do things differently if that's what you're more comfortable with.
-
- 1. You'll need to send an api request in the useEffect using  fetch. This needs to be a GET request to the api endpoint above.
+ 1. You'll need to send an api request in the useEffect using fetch. This needs to be a GET request to the api endpoint above.
  2. Store the response in the todos state. You'll need to use setTodos below to store this response in state.
     HINT: You can do this bit inside a .then after the fetch api call e.g. exampleApiCall.then((data) => {
         store todos in state here
@@ -35,10 +25,17 @@ import TodoItem from '../../components/TodoItem';
 const Home = () => {
 const [todos, setTodos] = useState([])
 useEffect(() => {
-
+// Send api request here. Example - https://jsonplaceholder.typicode.com
 },[])
 return (
-<div><TodoItem/></div>
+<div>
+    <h1>Home page</h1>
+    {
+        todos.map((todo) => (
+            <div/> // replace this div with TodoItem (don't forget to import it first.) and pass todo to it as a prop
+        ))
+    }
+</div>
 )
 }
 
