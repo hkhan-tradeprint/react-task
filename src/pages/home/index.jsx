@@ -13,26 +13,25 @@ import TodoItem from '../../components/TodoItem';
     HINT: You can do this bit inside a .then after the fetch api call e.g. exampleApiCall.then((data) => {
         store todos in state here
     })
- 3. Import the TodoItem component (stored in components/TodoItem). 
- 4. Map over the todos array that you stored in the state (done in point 2 above) and for each todo object, return an instance of the TodoItem component.
- 5. Inside the map in point 4, pass the TodoItem component a prop called todo which would be a todo object
- 6. Update the TodoItem component to take the todo prop and from it access the values for the following keys: title and completed. Then render just them. 
+ 3. Map over the todos array that you stored in the state (done in point 2 above) and for each todo object, return an instance of the TodoItem component.
+ 4. Inside the map in point 4, pass the TodoItem component a prop called todo which would be a todo object
+ 5. Update the TodoItem component to take the todo prop and from it access the values for the following keys: title and completed. Then render just them. 
  
  You can this style in any way you like using the scss files created.
 
  ONCE YOU COMPLETE THIS, WE CAN LOOK AT MAKING THIS LOOK EVEN BETTER.
  */
 const Home = () => {
-const [todos, setTodos] = useState([])
+const [todos, setTodos] = useState([1,2,3,4])
 useEffect(() => {
 // Send api request here. Example - https://jsonplaceholder.typicode.com
-},[])
+}, [])
 return (
 <div>
     <h1>Home page</h1>
     {
         todos.map((todo) => (
-            <div/> // replace this div with TodoItem (don't forget to import it first.) and pass todo to it as a prop
+            <div></div> // replace this div with TodoItem (don't forget to import it first.) and pass todo to it as a prop
         ))
     }
 </div>
